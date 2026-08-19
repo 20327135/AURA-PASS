@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/entryFragment"
+        android:icon="@drawable/ic_nav_entry"
+        android:title="입장" />
+
+    <item
+        android:id="@+id/fittingHomeFragment"
+        android:icon="@drawable/ic_nav_fitting"
+        android:title="피팅" />
+
+    <item
+        android:id="@+id/loungeFragment"
+        android:icon="@drawable/ic_nav_lounge"
+        android:title="라운지" />
+
+    <item
+        android:id="@+id/brandAppHomeFragment"
+        android:icon="@drawable/ic_nav_lookbook"
+        android:title="룩북" />
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_nav_settings"
+        android:title="설정" />
+
+</menu>

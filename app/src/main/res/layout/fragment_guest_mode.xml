@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="프로필을 불러올 수 없습니다"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VIP 패스 식별 실패 또는 프로필 접근 불가 상태입니다. 일반 고객 모드로 계속 진행하거나 다시 시도할 수 있습니다."
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="24dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/divider"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="현재 모드\n일반 고객"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기본 추천 및 안내 제공"
+                android:textSize="13sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다음 단계"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btn_view_lounge"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="라운지 추천 보기"
+        android:textSize="15sp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tv_start_fitting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="피팅 시작하기"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_reload_profile"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="프로필 다시 로드"
+        android:textSize="15sp"
+        android:backgroundTint="@color/surface"
+        android:textColor="@color/black" />
+
+</LinearLayout>

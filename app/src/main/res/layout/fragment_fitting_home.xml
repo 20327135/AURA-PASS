@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="스마트 피팅"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="피팅 구역 현재 상태"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="세션 활성 중 · RFID 정상 연결"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tv_recognized_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0개 상품 인식됨"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="스마트 피팅 시작하기"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RFID 태그가 부착된 상품을 피팅 구역에 반입하면 자동으로 목록이 구성됩니다."
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 자동 인식 상품 목록 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자동 인식 상품"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_recognized_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginBottom="20dp" />
+
+        <!-- 검색 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상품을 찾지 못하셨나요?"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="태그를 읽지 못한 상품은 직접 검색해 목록에 추가할 수 있습니다."
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btn_view_rfid"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="RFID 상세 보기"
+            android:textSize="14sp"
+            android:backgroundTint="@color/surface"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_view_product_list"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="피팅 상품 목록"
+            android:textSize="14sp"
+            android:backgroundTint="@color/surface"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tv_check_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="장애 상태 확인"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_start_fitting"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="피팅 시작하기"
+            android:textSize="15sp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</ScrollView>

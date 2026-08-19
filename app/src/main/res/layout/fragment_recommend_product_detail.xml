@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- 상품 이미지 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/surface"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_product_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 추천 이유 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/divider"
+            android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="추천 이유" android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/black" android:layout_marginBottom="8dp" />
+                <TextView
+                    android:id="@+id/tv_recommend_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary"
+                    android:lineSpacingExtra="4dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 피드백 -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="이 추천이 마음에 드셨나요?" android:textSize="14sp" android:textColor="@color/black"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="20dp">
+            <Button android:id="@+id/btn_like" android:layout_width="wrap_content" android:layout_height="36dp"
+                android:text="선호해..." android:textSize="12sp" android:backgroundTint="@color/surface"
+                android:textColor="@color/black" android:layout_marginEnd="8dp" />
+            <Button android:id="@+id/btn_dislike" android:layout_width="wrap_content" android:layout_height="36dp"
+                android:text="별로..." android:textSize="12sp" android:backgroundTint="@color/surface"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- 상품 정보 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/divider"
+            android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="상품 정보" android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/black" android:layout_marginBottom="8dp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="소재" android:textSize="13sp" android:textColor="@color/text_secondary" />
+                    <TextView android:id="@+id/tv_material" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textSize="13sp" android:textColor="@color/black" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginBottom="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="원산지" android:textSize="13sp" android:textColor="@color/text_secondary" />
+                    <TextView android:id="@+id/tv_origin" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textSize="13sp" android:textColor="@color/black" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="시즌" android:textSize="13sp" android:textColor="@color/text_secondary" />
+                    <TextView android:id="@+id/tv_season" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textSize="13sp" android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <EditText
+            android:id="@+id/et_memo"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:hint="추가로 남기고 싶은 의견을 입력하세요"
+            android:background="@drawable/bg_search_field"
+            android:padding="12dp"
+            android:textSize="13sp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_save_memo"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="의견 저장하기"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</ScrollView>

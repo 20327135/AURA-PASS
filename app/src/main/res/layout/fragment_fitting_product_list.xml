@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="피팅 상품 목록"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_rfid_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_fitting_products"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tv_add_by_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="태그를 읽지 못한 상품이 있나요?  상품 검색으로 추가"
+        android:textSize="13sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_go_to_mirror"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="스마트 미러로 이동"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white" />
+
+</LinearLayout>

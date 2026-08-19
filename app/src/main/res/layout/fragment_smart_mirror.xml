@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="스타일링 미러"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_fitting_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="세션 활성 중 · RFID 정상 연결"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 미러 프리뷰 플레이스홀더 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/surface"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 체형 분석 동의 버튼 -->
+        <Button
+            android:id="@+id/btn_body_consent"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="체형·분석 동의"
+            android:textSize="13sp"
+            android:backgroundTint="@color/surface"
+            android:textColor="@color/black"
+            android:layout_gravity="end"
+            android:layout_marginBottom="20dp" />
+
+        <!-- 액션 버튼들 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btn_ar_try_on"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="AR 가상 착용"
+                android:textSize="12sp"
+                android:backgroundTint="@color/surface"
+                android:textColor="@color/black"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_style_recommend"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="개인화 추천"
+                android:textSize="12sp"
+                android:backgroundTint="@color/surface"
+                android:textColor="@color/black"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_look_compare"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="룩 비교"
+                android:textSize="12sp"
+                android:backgroundTint="@color/surface"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- 개인화 추천 섹션 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="개인화 추천"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="12dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/divider"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="캐시미어 터틀닉 · 오트밀 베이지" android:textSize="14sp" android:textColor="@color/black"
+                    android:layout_marginBottom="2dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="퍼스널 컬러 기반" android:textSize="12sp" android:textColor="@color/text_secondary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/divider">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="레더 숄더백 · 크림·미디엄" android:textSize="14sp" android:textColor="@color/black"
+                    android:layout_marginBottom="2dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="스타일 선호 기반" android:textSize="12sp" android:textColor="@color/text_secondary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

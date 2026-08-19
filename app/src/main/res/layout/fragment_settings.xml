@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="개인정보·설정" android:textSize="22sp" android:textStyle="bold"
+            android:textColor="@color/black" android:layout_marginBottom="4dp" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="개인정보 관리" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="@color/black" android:layout_marginBottom="4dp" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="앱 이용을 위한 개인정보 활용 동의를 관리합니다" android:textSize="13sp"
+            android:textColor="@color/text_secondary" android:layout_marginBottom="16dp" />
+
+        <!-- 동의 스위치들 -->
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:cardCornerRadius="12dp" app:cardElevation="0dp"
+            app:strokeWidth="1dp" app:strokeColor="@color/divider" android:layout_marginBottom="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="NFC 식별" android:textSize="15sp" android:textColor="@color/black" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="매장 입장 시 VIP 패스 인식" android:textSize="12sp" android:textColor="@color/text_secondary" />
+                </LinearLayout>
+                <androidx.appcompat.widget.SwitchCompat android:id="@+id/switch_nfc"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:cardCornerRadius="12dp" app:cardElevation="0dp"
+            app:strokeWidth="1dp" app:strokeColor="@color/divider" android:layout_marginBottom="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="구매 이력 활용" android:textSize="15sp" android:textColor="@color/black" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="맞춤 추천에 참고" android:textSize="12sp" android:textColor="@color/text_secondary" />
+                </LinearLayout>
+                <androidx.appcompat.widget.SwitchCompat android:id="@+id/switch_purchase_history"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:cardCornerRadius="12dp" app:cardElevation="0dp"
+            app:strokeWidth="1dp" app:strokeColor="@color/divider" android:layout_marginBottom="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="이미지 분석" android:textSize="15sp" android:textColor="@color/black" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="체형 퍼스널 컬러 분석" android:textSize="12sp" android:textColor="@color/text_secondary" />
+                </LinearLayout>
+                <androidx.appcompat.widget.SwitchCompat android:id="@+id/switch_image_analysis"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:cardCornerRadius="12dp" app:cardElevation="0dp"
+            app:strokeWidth="1dp" app:strokeColor="@color/divider" android:layout_marginBottom="20dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="식이 정보 활용" android:textSize="15sp" android:textColor="@color/black" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="라운지 메뉴 추천" android:textSize="12sp" android:textColor="@color/text_secondary" />
+                </LinearLayout>
+                <androidx.appcompat.widget.SwitchCompat android:id="@+id/switch_food_info"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="서비스 상태" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="@color/black" android:layout_marginBottom="12dp" />
+
+        <Button android:id="@+id/btn_check_status" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="목적별 동의 관리"
+            android:backgroundTint="@color/surface" android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <TextView android:id="@+id/tv_check_error" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="장애 상태 확인"
+            android:textSize="14sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="16dp" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="개인정보는 암호화되어 안전하게 저장되며 동의 철회 시 즉시 새로운 추천에 반영되지 않습니다"
+            android:textSize="11sp" android:textColor="@color/text_hint" android:lineSpacingExtra="4dp" />
+
+    </LinearLayout>
+</ScrollView>

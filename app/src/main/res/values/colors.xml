@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 기본 -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 배경 -->
+    <color name="surface">#FFF5F5F5</color>
+    <color name="divider">#FFE0E0E0</color>
+
+    <!-- 텍스트 -->
+    <color name="text_primary">#FF000000</color>
+    <color name="text_secondary">#FF666666</color>
+    <color name="text_hint">#FF999999</color>
+
+    <!-- BottomNav 비활성 -->
+    <color name="nav_inactive">#FFAAAAAA</color>
+
+    <!-- 상태 -->
+    <color name="color_success">#FF2E7D32</color>
+    <color name="color_warning">#FFF57F17</color>
+    <color name="color_error">#FFC62828</color>
+
+    <!-- 브랜드 (기본값 — 변경 가능) -->
+    <color name="brand_primary">#FF000000</color>
+    <color name="brand_accent">#FF333333</color>
+</resources>

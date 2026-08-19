@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <View android:layout_width="match_parent" android:layout_height="180dp"
+            android:background="@color/surface" android:layout_marginBottom="16dp" />
+
+        <TextView android:id="@+id/tv_menu_name" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textSize="20sp" android:textStyle="bold"
+            android:textColor="@color/black" android:layout_marginBottom="4dp" />
+
+        <TextView android:id="@+id/tv_menu_category" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textSize="13sp"
+            android:textColor="@color/text_secondary" android:layout_marginBottom="16dp" />
+
+        <!-- 알레르기 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp" app:cardElevation="0dp"
+            app:strokeWidth="1dp" app:strokeColor="@color/divider"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="알레르기 및 식이 제한 안내" android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/black" android:layout_marginBottom="6dp" />
+                <TextView android:id="@+id/tv_allergy_info" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textSize="13sp" android:textColor="@color/black" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 추천 이유 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp" app:cardElevation="0dp"
+            app:strokeWidth="1dp" app:strokeColor="@color/divider"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="나를 위한 추천 이유" android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/black" android:layout_marginBottom="6dp" />
+                <TextView android:id="@+id/tv_recommend_reason" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textSize="13sp"
+                    android:textColor="@color/text_secondary" android:lineSpacingExtra="4dp" />
+                <TextView android:id="@+id/tv_tags" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textSize="12sp"
+                    android:textColor="@color/text_hint" android:layout_marginTop="6dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 온도 -->
+        <TextView android:id="@+id/tv_temp_option" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textSize="13sp"
+            android:textColor="@color/text_secondary" android:layout_marginBottom="20dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="이 메뉴 어떠셨나요?" android:textSize="14sp" android:textColor="@color/black"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btn_like" android:layout_width="0dp" android:layout_height="52dp"
+                android:layout_weight="1" android:text="마음에 들어요"
+                android:backgroundTint="@color/black" android:textColor="@color/white"
+                android:layout_marginEnd="8dp" />
+            <Button android:id="@+id/btn_dislike" android:layout_width="0dp" android:layout_height="52dp"
+                android:layout_weight="1" android:text="별로예요"
+                android:backgroundTint="@color/surface" android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="서비스 일시 중단 안내" android:textSize="22sp" android:textStyle="bold"
+            android:textColor="@color/black" android:layout_marginBottom="4dp" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="일부 자동화 기능을 현재 사용할 수 없습니다." android:textSize="13sp"
+            android:textColor="@color/text_secondary" android:layout_marginBottom="20dp" />
+
+        <!-- 현재 장애 상태 -->
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeWidth="1dp"
+            app:strokeColor="@color/divider" android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="현재 장애 상태" android:textSize="14sp" android:textStyle="bold"
+                    android:textColor="@color/black" android:layout_marginBottom="12dp" />
+
+                <TextView android:id="@+id/tv_rfid_error" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:padding="6dp"
+                    android:background="@color/surface" android:textSize="13sp"
+                    android:textColor="@color/black" android:layout_marginBottom="6dp" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="피팅 구역 상품 자동 인식이 중단되었습니다." android:textSize="12sp"
+                    android:textColor="@color/text_secondary" android:layout_marginBottom="8dp" />
+
+                <TextView android:id="@+id/tv_ai_error" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:padding="6dp"
+                    android:background="@color/surface" android:textSize="13sp"
+                    android:textColor="@color/black" android:layout_marginBottom="6dp" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="개인화 스타일링 및 메뉴 추천을 제공하지 못하고 있습니다." android:textSize="12sp"
+                    android:textColor="@color/text_secondary" android:layout_marginBottom="8dp" />
+
+                <TextView android:id="@+id/tv_network_error" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:padding="6dp"
+                    android:background="@color/surface" android:textSize="13sp"
+                    android:textColor="@color/black" android:layout_marginBottom="6dp" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="일부 데이터 동기화가 지연될 수 있습니다." android:textSize="12sp"
+                    android:textColor="@color/text_secondary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button android:id="@+id/btn_manual_mode" android:layout_width="match_parent"
+            android:layout_height="52dp" android:text="수동 응대 전환하기"
+            android:backgroundTint="@color/black" android:textColor="@color/white"
+            android:layout_marginBottom="8dp" />
+
+        <Button android:id="@+id/btn_alt_recommend" android:layout_width="match_parent"
+            android:layout_height="52dp" android:text="대체 추천 보기"
+            android:backgroundTint="@color/surface" android:textColor="@color/black" />
+
+    </LinearLayout>
+</ScrollView>

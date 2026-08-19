@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="룩 비교"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="저장한 룩을 나란히 비교하고 다음 상담에 활용하세요."
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="20dp" />
+
+        <!-- 룩 A / B 나란히 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                <View android:layout_width="match_parent" android:layout_height="140dp"
+                    android:background="@color/surface" android:layout_marginBottom="8dp" />
+                <TextView android:id="@+id/tv_look_a_name" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textSize="13sp" android:textColor="@color/text_secondary"
+                    android:gravity="center" android:layout_marginBottom="8dp" />
+                <Button android:id="@+id/btn_save_look_a" android:layout_width="match_parent"
+                    android:layout_height="44dp" android:text="룩 A 저장"
+                    android:backgroundTint="@color/black" android:textColor="@color/white" android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <View android:layout_width="match_parent" android:layout_height="140dp"
+                    android:background="@color/surface" android:layout_marginBottom="8dp" />
+                <TextView android:id="@+id/tv_look_b_name" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textSize="13sp" android:textColor="@color/text_secondary"
+                    android:gravity="center" android:layout_marginBottom="8dp" />
+                <Button android:id="@+id/btn_save_look_b" android:layout_width="match_parent"
+                    android:layout_height="44dp" android:text="룩 B 저장"
+                    android:backgroundTint="@color/black" android:textColor="@color/white" android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 다음 방문 메모 -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="다음 방문 메모 및 요청" android:textSize="14sp" android:textStyle="bold"
+            android:textColor="@color/black" android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_memo"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:hint="어드바이저에게 전달할 메모나 요청 사항을 입력하세요."
+            android:background="@drawable/bg_search_field"
+            android:padding="12dp"
+            android:textSize="13sp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btn_save_memo"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="메모 저장"
+            android:backgroundTint="@color/surface"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tv_goto_brand_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="브랜드 앱 홈으로 이동"
+            android:textSize="14sp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+</ScrollView>

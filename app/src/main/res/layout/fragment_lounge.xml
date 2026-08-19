@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="라운지 F&amp;B 추천"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원님의 취향과 오늘 방문 맥락을 반영했습니다."
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="20dp" />
+
+        <!-- 웰컴 드링크 -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="웰컴 드링크" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="@color/black" android:layout_marginBottom="12dp" />
+
+        <View android:layout_width="match_parent" android:layout_height="140dp"
+            android:background="@color/surface" android:layout_marginBottom="12dp" />
+
+        <TextView android:id="@+id/tv_welcome_drink_name" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="@color/black" android:layout_marginBottom="6dp" />
+
+        <TextView android:id="@+id/tv_welcome_drink_reason" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textSize="13sp"
+            android:textColor="@color/text_secondary" android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="24dp">
+            <Button android:id="@+id/btn_welcome_like" android:layout_width="wrap_content"
+                android:layout_height="36dp" android:text="좋아..." android:textSize="12sp"
+                android:backgroundTint="@color/surface" android:textColor="@color/black"
+                android:layout_marginEnd="8dp" />
+            <Button android:id="@+id/btn_welcome_dislike" android:layout_width="wrap_content"
+                android:layout_height="36dp" android:text="별로예요" android:textSize="12sp"
+                android:backgroundTint="@color/surface" android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- 디저트 -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="디저트" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="@color/black" android:layout_marginBottom="12dp" />
+
+        <View android:layout_width="match_parent" android:layout_height="140dp"
+            android:background="@color/surface" android:layout_marginBottom="12dp" />
+
+        <TextView android:id="@+id/tv_dessert_name" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textSize="16sp" android:textStyle="bold"
+            android:textColor="@color/black" android:layout_marginBottom="6dp" />
+
+        <TextView android:id="@+id/tv_dessert_reason" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textSize="13sp"
+            android:textColor="@color/text_secondary" android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="24dp">
+            <Button android:id="@+id/btn_dessert_like" android:layout_width="wrap_content"
+                android:layout_height="36dp" android:text="좋아..." android:textSize="12sp"
+                android:backgroundTint="@color/surface" android:textColor="@color/black"
+                android:layout_marginEnd="8dp" />
+            <Button android:id="@+id/btn_dessert_dislike" android:layout_width="wrap_content"
+                android:layout_height="36dp" android:text="별로예요" android:textSize="12sp"
+                android:backgroundTint="@color/surface" android:textColor="@color/black" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_view_all_fnb"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="전체 F&amp;B 추천 보기"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</ScrollView>

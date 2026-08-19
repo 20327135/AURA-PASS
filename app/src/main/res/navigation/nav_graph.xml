@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/entryFragment">
+
+    <!-- ===================== 입장 탭 ===================== -->
+    <fragment
+        android:id="@+id/entryFragment"
+        android:name="com.example.aura_pass2026.ui.entry.EntryFragment"
+        android:label="매장 입장"
+        tools:layout="@layout/fragment_entry">
+        <action
+            android:id="@+id/action_entry_to_nfc"
+            app:destination="@id/nfcScanFragment" />
+        <action
+            android:id="@+id/action_entry_to_guest"
+            app:destination="@id/guestModeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nfcScanFragment"
+        android:name="com.example.aura_pass2026.ui.entry.NfcScanFragment"
+        android:label="NFC VIP 패스 인식"
+        tools:layout="@layout/fragment_nfc_scan">
+        <action
+            android:id="@+id/action_nfc_to_profile"
+            app:destination="@id/customerProfileFragment" />
+        <action
+            android:id="@+id/action_nfc_to_manual_entry"
+            app:destination="@id/guestModeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customerProfileFragment"
+        android:name="com.example.aura_pass2026.ui.entry.CustomerProfileFragment"
+        android:label="고객 프로필 확인"
+        tools:layout="@layout/fragment_customer_profile">
+        <argument
+            android:name="customerId"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_profile_to_fitting"
+            app:destination="@id/fittingHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guestModeFragment"
+        android:name="com.example.aura_pass2026.ui.entry.GuestModeFragment"
+        android:label="일반 고객 모드"
+        tools:layout="@layout/fragment_guest_mode">
+        <action
+            android:id="@+id/action_guest_to_lounge"
+            app:destination="@id/loungeFragment" />
+        <action
+            android:id="@+id/action_guest_to_fitting"
+            app:destination="@id/fittingHomeFragment" />
+    </fragment>
+
+    <!-- ===================== 피팅 탭 ===================== -->
+    <fragment
+        android:id="@+id/fittingHomeFragment"
+        android:name="com.example.aura_pass2026.ui.fitting.FittingHomeFragment"
+        android:label="스마트 피팅 홈"
+        tools:layout="@layout/fragment_fitting_home">
+        <action
+            android:id="@+id/action_fitting_to_rfid"
+            app:destination="@id/rfidScanFragment" />
+        <action
+            android:id="@+id/action_fitting_to_product_list"
+            app:destination="@id/fittingProductListFragment" />
+        <action
+            android:id="@+id/action_fitting_to_mirror"
+            app:destination="@id/smartMirrorFragment" />
+        <action
+            android:id="@+id/action_fitting_to_error"
+            app:destination="@id/serviceErrorFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rfidScanFragment"
+        android:name="com.example.aura_pass2026.ui.fitting.RfidScanFragment"
+        android:label="RFID 상품 인식"
+        tools:layout="@layout/fragment_rfid_scan">
+        <action
+            android:id="@+id/action_rfid_to_product_list"
+            app:destination="@id/fittingProductListFragment" />
+        <action
+            android:id="@+id/action_rfid_to_manual_search"
+            app:destination="@id/productSearchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fittingProductListFragment"
+        android:name="com.example.aura_pass2026.ui.fitting.FittingProductListFragment"
+        android:label="피팅 상품 목록"
+        tools:layout="@layout/fragment_fitting_product_list">
+        <action
+            android:id="@+id/action_product_list_to_search"
+            app:destination="@id/productSearchFragment" />
+        <action
+            android:id="@+id/action_product_list_to_mirror"
+            app:destination="@id/smartMirrorFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productSearchFragment"
+        android:name="com.example.aura_pass2026.ui.fitting.ProductSearchFragment"
+        android:label="수동 상품 검색"
+        tools:layout="@layout/fragment_product_search">
+        <action
+            android:id="@+id/action_search_to_product_list"
+            app:destination="@id/fittingProductListFragment" />
+    </fragment>
+
+    <!-- ===================== 미러/스타일링 (피팅 탭에서 접근) ===================== -->
+    <fragment
+        android:id="@+id/smartMirrorFragment"
+        android:name="com.example.aura_pass2026.ui.mirror.SmartMirrorFragment"
+        android:label="스마트 미러"
+        tools:layout="@layout/fragment_smart_mirror">
+        <action
+            android:id="@+id/action_mirror_to_consent"
+            app:destination="@id/bodyAnalysisConsentFragment" />
+        <action
+            android:id="@+id/action_mirror_to_ar"
+            app:destination="@id/arTryOnFragment" />
+        <action
+            android:id="@+id/action_mirror_to_style_recommend"
+            app:destination="@id/styleRecommendFragment" />
+        <action
+            android:id="@+id/action_mirror_to_look_compare"
+            app:destination="@id/lookCompareFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bodyAnalysisConsentFragment"
+        android:name="com.example.aura_pass2026.ui.mirror.BodyAnalysisConsentFragment"
+        android:label="체형·분석 동의"
+        tools:layout="@layout/fragment_body_analysis_consent" />
+
+    <fragment
+        android:id="@+id/arTryOnFragment"
+        android:name="com.example.aura_pass2026.ui.mirror.ArTryOnFragment"
+        android:label="AR 가상 착용"
+        tools:layout="@layout/fragment_ar_try_on">
+        <argument
+            android:name="productId"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_ar_to_look_compare"
+            app:destination="@id/lookCompareFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/styleRecommendFragment"
+        android:name="com.example.aura_pass2026.ui.mirror.StyleRecommendFragment"
+        android:label="개인화 스타일링 추천"
+        tools:layout="@layout/fragment_style_recommend">
+        <action
+            android:id="@+id/action_style_to_product_detail"
+            app:destination="@id/recommendProductDetailFragment" />
+        <action
+            android:id="@+id/action_style_to_ar"
+            app:destination="@id/arTryOnFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recommendProductDetailFragment"
+        android:name="com.example.aura_pass2026.ui.mirror.RecommendProductDetailFragment"
+        android:label="추천 상품 상세"
+        tools:layout="@layout/fragment_recommend_product_detail">
+        <argument
+            android:name="productId"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lookCompareFragment"
+        android:name="com.example.aura_pass2026.ui.mirror.LookCompareFragment"
+        android:label="룩 비교"
+        tools:layout="@layout/fragment_look_compare">
+        <action
+            android:id="@+id/action_look_compare_to_brand_home"
+            app:destination="@id/brandAppHomeFragment" />
+    </fragment>
+
+    <!-- ===================== 라운지 탭 ===================== -->
+    <fragment
+        android:id="@+id/loungeFragment"
+        android:name="com.example.aura_pass2026.ui.lounge.LoungeFragment"
+        android:label="라운지 추천"
+        tools:layout="@layout/fragment_lounge">
+        <action
+            android:id="@+id/action_lounge_to_fnb_list"
+            app:destination="@id/fnbListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fnbListFragment"
+        android:name="com.example.aura_pass2026.ui.lounge.FnbListFragment"
+        android:label="F&amp;B 추천 목록"
+        tools:layout="@layout/fragment_fnb_list">
+        <action
+            android:id="@+id/action_fnb_list_to_menu_detail"
+            app:destination="@id/menuDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuDetailFragment"
+        android:name="com.example.aura_pass2026.ui.lounge.MenuDetailFragment"
+        android:label="메뉴 상세 보기"
+        tools:layout="@layout/fragment_menu_detail">
+        <argument
+            android:name="menuItemId"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+    <!-- ===================== 룩북 탭 ===================== -->
+    <fragment
+        android:id="@+id/brandAppHomeFragment"
+        android:name="com.example.aura_pass2026.ui.lookbook.BrandAppHomeFragment"
+        android:label="브랜드 앱 홈"
+        tools:layout="@layout/fragment_brand_app_home">
+        <action
+            android:id="@+id/action_brand_home_to_my_lookbook"
+            app:destination="@id/myLookbookFragment" />
+        <action
+            android:id="@+id/action_brand_home_to_lounge"
+            app:destination="@id/loungeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myLookbookFragment"
+        android:name="com.example.aura_pass2026.ui.lookbook.MyLookbookFragment"
+        android:label="내 룩북"
+        tools:layout="@layout/fragment_my_lookbook">
+        <action
+            android:id="@+id/action_my_lookbook_to_look_detail"
+            app:destination="@id/lookDetailFragment" />
+        <action
+            android:id="@+id/action_my_lookbook_to_wishlist"
+            app:destination="@id/wishlistFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lookDetailFragment"
+        android:name="com.example.aura_pass2026.ui.lookbook.LookDetailFragment"
+        android:label="룩 상세·추천 이유"
+        tools:layout="@layout/fragment_look_detail">
+        <argument
+            android:name="lookId"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_look_detail_to_next_visit"
+            app:destination="@id/nextVisitSaveFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nextVisitSaveFragment"
+        android:name="com.example.aura_pass2026.ui.lookbook.NextVisitSaveFragment"
+        android:label="다음 방문 저장 목록"
+        tools:layout="@layout/fragment_next_visit_save" />
+
+    <fragment
+        android:id="@+id/wishlistFragment"
+        android:name="com.example.aura_pass2026.ui.lookbook.WishlistFragment"
+        android:label="관심 상품 목록"
+        tools:layout="@layout/fragment_wishlist" />
+
+    <!-- ===================== 설정 탭 ===================== -->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.aura_pass2026.ui.settings.SettingsFragment"
+        android:label="개인정보·설정"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settings_to_consent"
+            app:destination="@id/consentManageFragment" />
+        <action
+            android:id="@+id/action_settings_to_error"
+            app:destination="@id/serviceErrorFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/consentManageFragment"
+        android:name="com.example.aura_pass2026.ui.settings.ConsentManageFragment"
+        android:label="목적별 동의 관리"
+        tools:layout="@layout/fragment_consent_manage">
+        <action
+            android:id="@+id/action_consent_to_withdraw"
+            app:destination="@id/consentWithdrawFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/consentWithdrawFragment"
+        android:name="com.example.aura_pass2026.ui.settings.ConsentWithdrawFragment"
+        android:label="동의 철회"
+        tools:layout="@layout/fragment_consent_withdraw" />
+
+    <fragment
+        android:id="@+id/serviceErrorFragment"
+        android:name="com.example.aura_pass2026.ui.settings.ServiceErrorFragment"
+        android:label="장애 상태 안내"
+        tools:layout="@layout/fragment_service_error">
+        <action
+            android:id="@+id/action_error_to_alt_recommend"
+            app:destination="@id/altRecommendFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/altRecommendFragment"
+        android:name="com.example.aura_pass2026.ui.settings.AltRecommendFragment"
+        android:label="대체 추천 화면"
+        tools:layout="@layout/fragment_alt_recommend" />
+
+</navigation>
